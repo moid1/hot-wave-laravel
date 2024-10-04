@@ -44,6 +44,14 @@
                                     Manage your devices.
                                 </p>
                             </a>
+                            <a href="{{ route('tenancy.basic.device', tenant('id')) }}" class="block px-3 py-3 -m-3 space-y-1 transition duration-150 ease-in-out rounded-xl hover:bg-gray-100">
+                                <p class="text-base font-medium leading-6 text-gray-900">
+                                    Locations
+                                </p>
+                                <p class="text-xs leading-5 text-gray-500">
+                                  Manage Location
+                                </p>
+                            </a>
                         </div>
                     </div>
                 </div>

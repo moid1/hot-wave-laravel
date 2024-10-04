@@ -43,7 +43,7 @@ export const DeviceTable = (props) => {
     }
 
     const TableRow = (props) => {
-        const {name, sn, type, group_no, created_at, expire_at, admin} = props;
+        const {name,location,last_calibration_date, sn, type, group_no, created_at, expire_at, admin} = props;
 
         const statusVariant = status === "Paid" ? "success"
             : status === "Due" ? "warning"
@@ -69,6 +69,15 @@ export const DeviceTable = (props) => {
                 <td className="col-1 text-center">
                   <span className="fw-normal">
                     {sn}
+                  </span>
+                </td>
+                <td className="col-1 text-center">
+                  <span className="fw-normal">
+                    {location}
+                  </span>
+                </td> <td className="col-1 text-center">
+                  <span className="fw-normal">
+                    {last_calibration_date}
                   </span>
                 </td>
                 <td className="col-2 text-center">
@@ -121,6 +130,8 @@ export const DeviceTable = (props) => {
                         <th className="border-bottom text-center bold-font">#</th>
                         <th className="border-bottom text-center bold-font">Device Name</th>
                         <th className="border-bottom text-center bold-font">IMEI/SN</th>
+                        <th className="border-bottom text-center bold-font">Location</th>
+                        <th className="border-bottom text-center bold-font">Last Calibration Date</th>
                         <th className="border-bottom text-center bold-font">Type of facility</th>
                         <th className="border-bottom text-center bold-font">Group</th>
                         <th className="border-bottom text-center bold-font">Create Time</th>

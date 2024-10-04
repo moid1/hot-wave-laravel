@@ -50,7 +50,7 @@ const DeviceManager = (props) => {
     const [isEdit, setIsEdit] = useState(false);
     const [selectedDevice, setSelectedDevice] = useState(null);
     const [totalDevices, setTotalDevices] = useState(0);
-    const dataSource = new RestDataSource(process.env.MIX_IOT_APP_URL, (err) => console.log("Server connection failed."));
+    const dataSource = new RestDataSource('http://test.iotim.fircpei.com', (err) => console.log("Server connection failed."));
 
 
     useEffect(() => {

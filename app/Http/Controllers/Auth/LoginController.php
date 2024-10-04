@@ -41,9 +41,9 @@ class LoginController extends \Wave\Http\Controllers\Auth\LoginController
     private function setRedirect($user) {
         if(!$user->hasRole('admin')){
             if($user->tenant){
-                $this->redirectTo = '/'.$user->tenant->id.'/dashboard';
+                $this->redirectTo = '/'.$user->tenant->id.'/sensors/real-time';
             } else {
-                $this->redirectTo = '/'.$user->username.'/dashboard';
+                $this->redirectTo = '/'.$user->username.'/sensors/real-time';
             }
         } else {
             $this->redirectTo = '/admin';

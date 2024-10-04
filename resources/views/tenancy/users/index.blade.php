@@ -24,6 +24,7 @@
             <th>Name</th>
             <th>Email</th>
             <th>Avatar</th>
+            <th>Alert Group</th>
             <th>Send Mail</th>
             <th>Send SMS</th>
             <th>Action</th>
@@ -38,6 +39,7 @@
                     <img id="preview" src="{{ Voyager::image($product->avatar) . '?' . time() }}"
                          class="w-12 h-12 rounded-full " alt="{{$product->name}}"/>
                 </td>
+                <td>N/A</td>
                 <td class="text-center">
                     <div class="ps-0 form-check form-switch">
                         <label>

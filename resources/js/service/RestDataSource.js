@@ -3,6 +3,8 @@ import Axios from "axios";
 // import { response } from "express";
 export class RestDataSource {
     constructor(base_url, errorCallback) {
+        console.log('waow');
+        console.log(base_url);
         this.BASE_URL = base_url;
         this.handleError = errorCallback;
         Axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';

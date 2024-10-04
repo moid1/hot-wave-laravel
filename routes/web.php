@@ -54,6 +54,8 @@ Route::group([
     Route::get('basic/gateway', 'Tenancy\BasicSettingsController@gateway')->name('basic.gateway');
     Route::get('basic/group', 'Tenancy\BasicSettingsController@group')->name('basic.group');
     Route::get('basic/device', 'Tenancy\BasicSettingsController@device')->name('basic.device');
+    Route::get('basic/locations', 'Tenancy\BasicSettingsController@locations')->name('basic.locations');
+
     // sensors
     Route::get('sensors/real-time', 'Tenancy\SensorsController@realTime')->name('sensors.real');
     Route::get('sensors/report', 'Tenancy\SensorsController@report')->name('sensors.report');

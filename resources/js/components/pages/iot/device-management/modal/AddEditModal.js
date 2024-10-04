@@ -17,6 +17,8 @@ function AddEditModal(props) {
         label: matchGroup === undefined ? "Not Available" : matchGroup.label
     });
     const [deviceName, setDeviceName] = useState(!props.isEdit ? "" : props.selectedDevice.name);
+    const [location, setLocation] = useState('');
+    const [lastCalibrationDate, setLastCalibrationDate]= useState('')
     const [imei, setImei] = useState(!props.isEdit ? "" : props.selectedDevice.sn);
     const [devicePassword, setDevicePassword] = useState(!props.isEdit ? "" : props.selectedDevice.password);
     const [dataInterval, setDataInterval] = useState(!props.isEdit ? "15" : props.selectedDevice.interval);
@@ -148,6 +150,36 @@ function AddEditModal(props) {
                     </Col>
                     <Col xs={1} md={1} lg={1} xl={1}/>
                 </Row>
+
+                {/* // location */}
+
+                <Row className="mb-row">
+                    <Col xs={1} md={1} lg={1} xl={1}/>
+                    <Col xs={4} md={4} lg={4} xl={4}>
+                        <label className="facility-type-title">Location</label>
+                    </Col>
+                    <Col xs={6} md={6} lg={6} xl={6}>
+                        <FormControl defaultValue={location} type="text"
+                                     placeholder="" className="key-input-value grey-border"
+                                     onChange={e => setLocation(e.target.value)}/>
+                    </Col>
+                    <Col xs={1} md={1} lg={1} xl={1}/>
+                </Row>
+
+                <Row className="mb-row">
+                    <Col xs={1} md={1} lg={1} xl={1}/>
+                    <Col xs={4} md={4} lg={4} xl={4}>
+                        <label className="facility-type-title">Last Calibration Date</label>
+                    </Col>
+                    <Col xs={6} md={6} lg={6} xl={6}>
+                        <FormControl defaultValue={lastCalibrationDate} type="text"
+                                     placeholder="" className="key-input-value grey-border"
+                                     onChange={e => setLastCalibrationDate(e.target.value)}/>
+                    </Col>
+                    <Col xs={1} md={1} lg={1} xl={1}/>
+                </Row>
+
+
                 <Row className="mb-row">
                     <Col xs={9} md={9} lg={9} xl={9}>
                     </Col>

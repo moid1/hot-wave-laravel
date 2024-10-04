@@ -29,4 +29,8 @@ class BasicSettingsController extends Controller
     public function device(){
         return View('tenancy.basic.device');
     }
+
+    public function locations(){
+        return View('tenancy.basic.location');
+    }
 }
