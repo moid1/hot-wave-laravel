@@ -1,1 +1,0 @@
-require('./components/pages/iot/group-management/GroupManager');
