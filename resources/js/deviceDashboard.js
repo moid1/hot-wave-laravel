@@ -1,1 +1,0 @@
-require('./components/pages/iot/device-management/DeviceManager');
